@@ -7,5 +7,8 @@ const immutable = {
   },
   update (state, data) {
     return state.map(item => item.id !== data.id ? item : data )
+  },
+  set (state, data) {
+    return Object.assign(state, data)
   }
 }

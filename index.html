@@ -1,13 +1,22 @@
 <script src="./immutable.js"></script>
 <script>
-let test = [
-  { id: 1, name: 'vuejs' },
-  { id: 2, name: 'angular' }
-]
 
-setTimeout(() => {
-  test = immutable.update(test, { id: 2, name: 'Edwin Encomienda' })
-  console.log(test)
-}, 1000)
+
+// let state = {
+//   frameworks: [
+//     { id: 1, name: 'vuejs' },
+//     { id: 2, name: 'angular' }
+//   ]
+// }
+
+// setTimeout(() => {
+//   test = immutable.update(state, { id: 2, name: 'Edwin Encomienda' })
+//   // console.log(test)
+// }, 1000)
+
+// result1 = immutable.set(state2, { test: 'edwin' })
+let Object1 = { x: 1 }
+let Object2 = Object.assign(Object1, { x: 1 })
+console.log(Object1 == Object2)
 
 </script>
