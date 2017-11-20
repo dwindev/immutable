@@ -1,0 +1,24 @@
+<script>
+const immutable = {
+  push (state, data) {
+    return typeof(data) === 'string' ? [...state, data] : [...state].concat(data)
+  },
+  delete (state, id) {
+    return state.filter(item => item.id !== id)
+  },
+  update (state, data) {
+    return state.map(item => item.id !== data.id ? item : data )
+  }
+}
+
+let test = [
+  { id: 1, name: 'vuejs' },
+  { id: 2, name: 'angular' }
+]
+
+setTimeout(() => {
+  test = immutable.update(test, { id: 2, name: 'Edwin Encomienda' })
+  console.log(test)
+}, 1000)
+
+</script>
